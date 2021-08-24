@@ -1,0 +1,11 @@
+## Weekly GitHub Issues Report | {{dateFormat date}}
+
+*Only issues with severity medium or higher, oldest first.*
+
+{{#each issues}}
+### {{addOne @index}}. [{{title}}]({{url}})
+* Responsible: *{{assigned}}*
+* Since: *{{dateFormat created_at}}*
+* Severity: *{{severity}}*
+
+{{/each}}
