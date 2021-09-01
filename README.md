@@ -18,7 +18,7 @@ The general flow of individual endpoints is:
 1. An endpoint is called by GitHub when a specific event (i.e., new issue) happens
 2. The endpoint processes the event. If the event is relevant for the endpoint, it acts on it, usually in the form of altering related data in GitHub via the [Octokit SDK](https://github.com/octokit/octokit.js)
 
-Each endpoint is in a separate controller. When you start the service with `npm run starts`, all the endpoints become ready for accepting requests.
+Each endpoint is in a separate controller. When you start the service with `npm run start`, all the endpoints become ready for accepting requests.
 
 ## Endpoints
 
