@@ -48,5 +48,5 @@ It's helpful to test on a personal repo where you have full access and won't fac
 
 | Variable                             | Purpose                                                                                                                                            |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GITHUB_TOKEN`                       | The token we'll use to interact with GitHub Issues and Projects                                                                                    |
+| `GITHUB_TOKEN`                       | The token we'll use to interact with GitHub Issues and Projects. More information on how to obtain the token [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).     |
 | `GITHUB_REQUEST_VERIFICATION_SECRET` | See [Securing your webhooks](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/securing-your-webhooks) in GitHub docs |
