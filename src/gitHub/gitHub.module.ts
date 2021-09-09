@@ -9,10 +9,11 @@ import {
     ENDPOINT_PATH as LinkChildIssuePath,
 } from './gitHubLinkChildIssue.controller'
 import { GitHubLinkChildIssueTextService } from './gitHubLinkChildIssueText.service'
+import { ReplicateLabelsController, ENDPOINT_PATH as ReplicateLabelsPath, } from './replicateLabels.controller'
 
 @Module({
     imports: [ConfigModule.forRoot()],
-    controllers: [GitHubLinkChildIssueController],
+    controllers: [GitHubLinkChildIssueController, ReplicateLabelsController],
     providers: [
         GitHubConfigurationService,
         AppConfigurationService,
@@ -29,6 +30,11 @@ export class GitHubReportModule {
             .apply(RawBodyMiddleware)
             .forRoutes({
                 path: `/${LinkChildIssuePath}`,
+                method: RequestMethod.ALL,
+            })
+            .apply(RawBodyMiddleware)
+            .forRoutes({
+                path: `/${ReplicateLabelsPath}`,
                 method: RequestMethod.ALL,
             })
             .apply(JsonBodyMiddleware)

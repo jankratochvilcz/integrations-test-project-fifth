@@ -30,6 +30,14 @@ Aside from adding the markdown table, the endpoint also alters the parent issue'
 
 ![screenshot](https://p-NBF5xJ28.t3.n0.cdn.getcloudapp.com/items/2Nulq7qB/0e966b93-a83f-45c5-960c-2559ab166dea.jpeg?v=0bda7154be85f18627a165a230bfc31a)
 
+### 2. `github/replicate-labels?owner={REPO_OWNER}&repos={SYNCED_REPOS}`
+
+The `github/replicate-labels` endpoint disseminates labels across our repos from a single central repo. Whenever you create a label in a repo where the webhook is running, it will sync adds/edits/deletions of that label to other labels specified in the webhook.
+
+Arguments:
+* `REPO_OWNER` - The organization that owns the repo
+* `SYNCED_REPOS` - A JSON array of repos to where the label change will be synced
+
 ## Quality
 
 At this point, the project doesn't meet all the best practices of Integrations as it's not customer-facing. This said, all new changes are expected to improve the status quo. If we touch sub-par code and don't have time to improve it, we should create issues to track the technical debt
